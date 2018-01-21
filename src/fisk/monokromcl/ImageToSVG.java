@@ -1,6 +1,10 @@
 package fisk.monokromcl;
 
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class ImageToSVG {
 
@@ -13,14 +17,23 @@ public class ImageToSVG {
           "viewBox=\"0 0 %d %d\" " +
           "xml:space=\"preserve\" " +
           "width=\"%dpx\" " +
-          "height=\"%dpx\">\n";
+          "height=\"%dpx\">\n" +
+          "<g>\n";
 
-  public static void process(BufferedImage source, ImageToSVGListener listener){
+  public static void process(BufferedImage source, File outputFile, ImageToSVGListener listener) throws IOException {
+    BufferedWriter writer;
+    try {
+      writer = new BufferedWriter(new FileWriter(outputFile.getAbsolutePath()));
+    } catch (IOException e) {
+      e.printStackTrace();
+      Out.fatalError("Could not save file:\n" + e.toString());
+      return;
+    }
+
     int width = source.getWidth();
     int height = source.getHeight();
 
-    StringBuilder builder = new StringBuilder();
-    builder.append(String.format(SVG_HEADER_TEMPLATE, width, height, width, height));
+    writer.write(String.format(SVG_HEADER_TEMPLATE, width, height, width, height));
 
     int lineStartX = -1;
 
@@ -41,7 +54,7 @@ public class ImageToSVG {
               continue;
             }else{
               String line = "<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n";
-              builder.append(String.format(line, lineStartX, y, x+1, y));
+              writer.write(String.format(line, lineStartX, y, x+1, y));
               lineStartX = -1;
             }
           }
@@ -52,17 +65,17 @@ public class ImageToSVG {
               //Next pixel is black - so we're drawing a line
               lineStartX = x;
             }else{
-              drawDot(builder, x, y);
+              drawDot(writer, x, y);
             }
           }else{
             //The end of the line...
-            drawDot(builder, x, y);
+            drawDot(writer, x, y);
           }
         }else{
           //Pixel is white:
           if(lineStartX != -1) {
             String line = "<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n";
-            builder.append(String.format(line, lineStartX, y, x+1, y));
+            writer.write(String.format(line, lineStartX, y, x+1, y));
             lineStartX = -1;
           }
         }
@@ -70,18 +83,18 @@ public class ImageToSVG {
     }
 
 
-    builder.append("\n</svg>");
-
-    listener.svgReady(builder.toString());
+    writer.write("\n</g>\n</svg>");
+    writer.close();
+    listener.svgExported();
 
   }
 
-  private static void drawDot(StringBuilder builder, int x, int y){
+  private static void drawDot(BufferedWriter writer, int x, int y) throws IOException {
     String line = "<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n";
-    builder.append(String.format(line, x, y, x+1, y));
+    writer.write(String.format(line, x, y, x+1, y));
   }
 
   public interface ImageToSVGListener{
-    void svgReady(String svgString);
+    void svgExported();
   }
 }

@@ -20,8 +20,8 @@
       <file leaf-file-name="MonokromCL.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fisk/monokromcl/MonokromCL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="114" column="35" lean-forward="false" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+            <state relative-caret-position="319">
+              <caret line="113" column="56" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,9 +32,11 @@
       <file leaf-file-name="ImageToSVG.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fisk/monokromcl/ImageToSVG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="892">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="355">
+              <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +97,8 @@
         <option value="$PROJECT_DIR$/src/fisk/monokromcl/Log.java" />
         <option value="$PROJECT_DIR$/src/fisk/monokromcl/Out.java" />
         <option value="$PROJECT_DIR$/src/fisk/monokromcl/Main.java" />
-        <option value="$PROJECT_DIR$/src/fisk/monokromcl/ImageToSVG.java" />
         <option value="$PROJECT_DIR$/src/fisk/monokromcl/Dithering.java" />
+        <option value="$PROJECT_DIR$/src/fisk/monokromcl/ImageToSVG.java" />
         <option value="$PROJECT_DIR$/src/fisk/monokromcl/MonokromCL.java" />
       </list>
     </option>
@@ -368,16 +370,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fisk/monokromcl/ImageToSVG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="355">
+          <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fisk/monokromcl/MonokromCL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="114" column="35" lean-forward="false" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+        <state relative-caret-position="319">
+          <caret line="113" column="56" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

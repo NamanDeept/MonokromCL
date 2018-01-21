@@ -111,20 +111,7 @@ public class MonokromCL {
           outputSVG = new File(newPath);
         }
 
-        File finalOutputSVG = outputSVG;
-        ImageToSVG.process(dithered, svgString -> {
-          PrintWriter out = null;
-          try {
-            out = new PrintWriter(finalOutputSVG.getAbsolutePath());
-            out.print(svgString);
-          } catch (FileNotFoundException e) {
-            e.printStackTrace();
-          }finally{
-            if(out != null) {
-              out.close();
-            }
-          }
-        });
+        ImageToSVG.process(dithered, outputSVG, () -> Out.print("SVG exported"));
       }else if (destinationFile != null) {
         Out.print("Saving dithered image to " + destinationFile.getAbsolutePath());
         String destinationPath = destinationFile.getAbsolutePath();
