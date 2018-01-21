@@ -145,7 +145,7 @@ public class Dithering {
    *
    */
   public static BufferedImage ordered2By2Bayer(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -194,7 +194,7 @@ public class Dithering {
    *  (1/10)
    */
   public static BufferedImage ordered3By3Bayer(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -246,7 +246,7 @@ public class Dithering {
    *  (1/17)
    */
   public static BufferedImage ordered4By4Bayer(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -303,7 +303,7 @@ public class Dithering {
    *  (1/65)
    */
   public static BufferedImage ordered8By8Bayer(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -359,7 +359,7 @@ public class Dithering {
    * (1/16)
    */
   public static BufferedImage floydSteinberg(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -409,7 +409,7 @@ public class Dithering {
    * (1/48)
    */
   public static BufferedImage jarvisJudiceNinke(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -470,7 +470,7 @@ public class Dithering {
    * (1/32)
    */
   public static BufferedImage sierra(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -528,7 +528,7 @@ public class Dithering {
    * (1/16)
    */
   public static BufferedImage twoRowSierra(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -582,7 +582,7 @@ public class Dithering {
    * (1/4)
    */
   public static BufferedImage sierraLite(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -633,7 +633,7 @@ public class Dithering {
    * (1/8)
    */
   public static BufferedImage atkinson(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -688,7 +688,7 @@ public class Dithering {
    * (1/42)
    */
   public static BufferedImage stucki(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -748,7 +748,7 @@ public class Dithering {
    * (1/32)
    */
   public static BufferedImage burkes(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -802,7 +802,7 @@ public class Dithering {
    * (1/8)
    */
   public static BufferedImage falseFloydSteinberg(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -842,7 +842,7 @@ public class Dithering {
   }
 
   public static BufferedImage simpleLeftToRightErrorDiffusion(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -886,7 +886,7 @@ public class Dithering {
   }
 
   public static BufferedImage randomDithering(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
@@ -923,7 +923,7 @@ public class Dithering {
   }
 
   public static BufferedImage simpleThreshold(BufferedImage src) {
-    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_4BYTE_ABGR);
+    BufferedImage out = new BufferedImage(src.getWidth(), src.getHeight(), BufferedImage.TYPE_INT_RGB);
 
     int alpha, red;
     int pixel;
