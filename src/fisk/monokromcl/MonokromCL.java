@@ -94,7 +94,9 @@ public class MonokromCL {
 
         if(destinationFile != null){
           Out.print("Saving dithered image to " + destinationFile.getAbsolutePath());
-          ImageIO.write(dithered, "png", destinationFile);
+          String destinationPath = destinationFile.getAbsolutePath();
+          String suffix = destinationPath.substring(destinationPath.lastIndexOf(".") + 1, destinationPath.length());
+          ImageIO.write(dithered, suffix, destinationFile);
         }else{
           String sourcePath = sourceFile.getAbsolutePath();
           String suffix = sourcePath.substring(sourcePath.lastIndexOf(".") + 1, sourcePath.length());
@@ -105,10 +107,6 @@ public class MonokromCL {
           File outputfile = new File(newPath);
           ImageIO.write(dithered, suffix, outputfile);
         }
-
-
-
-
       }
     } catch (IOException e) {
       e.printStackTrace();
