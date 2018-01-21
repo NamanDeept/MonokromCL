@@ -30,3 +30,7 @@ Available dither types:
   randomDithering
   simpleThreshold
 ```
+
+## Examples
+
+`java -jar MonokromCL.jar -help` - displays above help
