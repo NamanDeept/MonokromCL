@@ -136,7 +136,6 @@ public class MonokromCL {
   private void showHelp() {
     Out.print("");
     Out.print("Usage:");
-    Out.print("-debug - turn on debug log output");
     Out.print("-d, -dither - dither algorithm (see below)");
     Out.print("-s, -source - path to source image");
     Out.print("-t, -target - path to save file");
