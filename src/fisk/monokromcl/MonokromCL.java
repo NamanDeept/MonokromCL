@@ -34,7 +34,7 @@ public class MonokromCL {
   @Parameter(names = {"-svg"})
   private boolean exportSVG = false;
 
-  @Parameter(names = "--help", help = true)
+  @Parameter(names = {"-help", "?"}, help = true)
   private boolean help;
 
   public static void main(String... args) {
@@ -112,7 +112,7 @@ public class MonokromCL {
         }
 
         File finalOutputSVG = outputSVG;
-        ImageToSVG.process(sourceImage, svgString -> {
+        ImageToSVG.process(dithered, svgString -> {
           PrintWriter out = null;
           try {
             out = new PrintWriter(finalOutputSVG.getAbsolutePath());
@@ -149,10 +149,13 @@ public class MonokromCL {
   private void showHelp() {
     Out.print("");
     Out.print("Usage:");
-    Out.print("-d, -debug - turn on debug log output");
-    Out.print("-t, -type - dither algorithm (see below)");
+    Out.print("-debug - turn on debug log output");
+    Out.print("-d, -dither - dither algorithm (see below)");
     Out.print("-s, -source - path to source image");
+    Out.print("-t, -target - path to save file");
     Out.print("-th, -threshold - default is 128");
+    Out.print("-svg - output to SVG");
+    Out.print("?, -help - display this help");
     Out.print("");
     Out.print("Available dither types:");
     for (String type : Dithering.getNames()) {
