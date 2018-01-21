@@ -103,7 +103,7 @@ public class MonokromCL {
           String newPath = String.format("%s_dithered_%d.%s", sourcePath, System.currentTimeMillis(), suffix);
           Out.print(String.format("No target file supplied, using %s", newPath));
           File outputfile = new File(newPath);
-          ImageIO.write(dithered, "png", outputfile);
+          ImageIO.write(dithered, suffix, outputfile);
         }
 
 
