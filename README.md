@@ -4,7 +4,7 @@
 
 [Downoad .jar](https://github.com/fiskurgit/MonokromCL/raw/master/out/artifacts/MonokromCL_jar/MonokromCL.jar)
 
-A command-line Java app to generate monochrome dithered images. Includes SVG export option for drawing rasters using Axidraw or other pen plotter,
+A command-line Java app to generate monochrome dithered images. Includes SVG export option for drawing rasters using Axidraw or other pen plotter.
 
 ```
 Usage:
