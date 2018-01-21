@@ -33,6 +33,8 @@ Available dither types:
 
 ## Examples
 
+You'll need [Java installed](https://java.com/download):
+
 * `java -jar MonokromCL.jar -help` - displays above help
 * `java -jar MonokromCL.jar  -source /path/to/image.jpg -dither ordered2By2Bayer` - creates /path/to/image_dithered_####.jpg where #### is a timestemp in milliseconds using the ordered2By2Bayer dither method
 * `java -jar MonokromCL.jar  -source /path/to/image.jpg -dither atkinson -th 155 -svg` - process source image using the atkinson dither method with threshold 155 then export as SVG to /path/to/image_svg_####.svg
